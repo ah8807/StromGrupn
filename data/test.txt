@@ -2,7 +2,7 @@ POTREBUJEMO:
 - Podatke o sončnosti: mamo https://cds.climate.copernicus.eu/cdsapp#!/home
 - Podatke o proizvodnji energije sončnih celic: NIMAMO
 - Podatke o ceni energentov: mamo https://pxweb.stat.si/SiStatData/pxweb/sl/Data/-/H028S.px/
-- Podatke o toplotnih črpalkah (vrste in učinkovitosti ter cena)
-- Podatke o električnih avtih (kapaciteta baterije, poraba, modeli...)
-- Podatke o energetskih izkaznicah
-- Podatke o katastrih (prostornina nepremičnine)
+- Podatke o toplotnih črpalkah (vrste in učinkovitosti ter cena) NIMAMO
+- Podatke o električnih avtih (kapaciteta baterije, poraba, modeli...) NIMAMO
+- Podatke o energetskih izkaznicah NIMAMO
+- Podatke o katastrih (prostornina nepremičnine) NIMAMO
