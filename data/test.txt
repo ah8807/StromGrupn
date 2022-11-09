@@ -4,3 +4,5 @@ POTREBUJEMO:
 - Podatke o ceni energentov: mamo https://pxweb.stat.si/SiStatData/pxweb/sl/Data/-/H028S.px/
 - Podatke o toplotnih črpalkah (vrste in učinkovitosti ter cena)
 - Podatke o električnih avtih (kapaciteta baterije, poraba, modeli...)
+- Podatke o energetskih izkaznicah
+- Podatke o katastrih (prostornina nepremičnine)
