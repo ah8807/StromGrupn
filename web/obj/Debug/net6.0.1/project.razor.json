@@ -1,0 +1,385 @@
+{
+  "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\web.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-3.0",
+    "LanguageVersion": "6.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-3.0"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 1000
+  },
+  "RootNamespace": "web",
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Bazeni\\Delete.cshtml",
+      "TargetPath": "Views\\Bazeni\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Izvedbe\\Create.cshtml",
+      "TargetPath": "Views\\Izvedbe\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Uciteljii\\Edit.cshtml",
+      "TargetPath": "Views\\Uciteljii\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Uciteljii\\Create.cshtml",
+      "TargetPath": "Views\\Uciteljii\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Bazeni\\Index.cshtml",
+      "TargetPath": "Views\\Bazeni\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Bazeni\\Details.cshtml",
+      "TargetPath": "Views\\Bazeni\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Skupine\\Edit.cshtml",
+      "TargetPath": "Views\\Skupine\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Plavalci\\Details.cshtml",
+      "TargetPath": "Views\\Plavalci\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Plavalci\\Index.cshtml",
+      "TargetPath": "Views\\Plavalci\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Shared\\_LoginPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Uciteljii\\Delete.cshtml",
+      "TargetPath": "Views\\Uciteljii\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Skupine\\Create.cshtml",
+      "TargetPath": "Views\\Skupine\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Plavalci\\Delete.cshtml",
+      "TargetPath": "Views\\Plavalci\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Izvedbe\\Index.cshtml",
+      "TargetPath": "Views\\Izvedbe\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Error.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Izvedbe\\Delete.cshtml",
+      "TargetPath": "Views\\Izvedbe\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Skupine\\Delete.cshtml",
+      "TargetPath": "Views\\Skupine\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Plavalci\\Create.cshtml",
+      "TargetPath": "Views\\Plavalci\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Bazeni\\Create.cshtml",
+      "TargetPath": "Views\\Bazeni\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Uciteljii\\Details.cshtml",
+      "TargetPath": "Views\\Uciteljii\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Uciteljii\\Index.cshtml",
+      "TargetPath": "Views\\Uciteljii\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\Disable2fa.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Disable2fa.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Bazeni\\Edit.cshtml",
+      "TargetPath": "Views\\Bazeni\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Plavalci\\Edit.cshtml",
+      "TargetPath": "Views\\Plavalci\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Izvedbe\\Details.cshtml",
+      "TargetPath": "Views\\Izvedbe\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Skupine\\Details.cshtml",
+      "TargetPath": "Views\\Skupine\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Izvedbe\\Edit.cshtml",
+      "TargetPath": "Views\\Izvedbe\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Skupine\\Index.cshtml",
+      "TargetPath": "Views\\Skupine\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jurev\\Desktop\\Faks\\2.letnik\\IS\\PlavalniKlub\\web\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

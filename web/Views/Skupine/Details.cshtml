@@ -1,0 +1,42 @@
+@model web.Models.Skupina
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Skupina</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProgaID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProgaID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ura)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ura)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ucitelj)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ucitelj.UciteljID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bazen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bazen.BazenID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SkupinaID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
