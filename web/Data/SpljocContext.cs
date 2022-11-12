@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace web.Data
 {
-    public class SpljocContext : IdentityDbContext<ApplicationUser>
+    public class StromGrupnContext : IdentityDbContext<ApplicationUser>
     {
-        public SpljocContext(DbContextOptions<SpljocContext> options) : base(options)
+        public StromGrupnContext(DbContextOptions<StromGrupnContext> options) : base(options)
         {
         }
 

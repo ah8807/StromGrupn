@@ -7,7 +7,7 @@ namespace web.Data
 {
     public static class DbInitializer
     {
-        public static void Initialize(SpljocContext context)
+        public static void Initialize(StromGrupnContext context)
         {
             context.Database.EnsureCreated();
 

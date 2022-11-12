@@ -16,9 +16,9 @@ namespace web.Controllers_Api
     [ApiKeyAuth]
     public class BazeniApiController : ControllerBase
     {
-        private readonly SpljocContext _context;
+        private readonly StromGrupnContext _context;
 
-        public BazeniApiController(SpljocContext context)
+        public BazeniApiController(StromGrupnContext context)
         {
             _context = context;
         }

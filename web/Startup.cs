@@ -30,14 +30,14 @@ namespace web
             services.AddControllersWithViews();
             services.AddIdentity<ApplicationUser, IdentityRole>(options => 
             options.Stores.MaxLengthForKeys = 128).
-            AddEntityFrameworkStores<SpljocContext>().
+            AddEntityFrameworkStores<StromGrupnContext>().
             AddDefaultUI().
             AddDefaultTokenProviders();
             
             services.AddSwaggerGen();
 
-            services.AddDbContext<SpljocContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("SpljocContext")));
+            services.AddDbContext<StromGrupnContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("StromGrupnContext")));
                 //options.UseSqlServer(Configuration.GetConnectionString("AzureContex")));
         }
 

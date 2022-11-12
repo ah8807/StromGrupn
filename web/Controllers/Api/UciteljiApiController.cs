@@ -16,9 +16,9 @@ namespace web.Controllers_Api
     [ApiKeyAuth]
     public class UciteljiApiController : ControllerBase
     {
-        private readonly SpljocContext _context;
+        private readonly StromGrupnContext _context;
 
-        public UciteljiApiController(SpljocContext context)
+        public UciteljiApiController(StromGrupnContext context)
         {
             _context = context;
         }

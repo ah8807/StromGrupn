@@ -16,9 +16,9 @@ namespace web.Controllers_Api
     [ApiKeyAuth]
     public class IzvedbeApiController : ControllerBase
     {
-        private readonly SpljocContext _context;
+        private readonly StromGrupnContext _context;
 
-        public IzvedbeApiController(SpljocContext context)
+        public IzvedbeApiController(StromGrupnContext context)
         {
             _context = context;
         }

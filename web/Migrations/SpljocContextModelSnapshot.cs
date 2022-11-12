@@ -8,8 +8,8 @@ using web.Data;
 
 namespace web.Migrations
 {
-    [DbContext(typeof(SpljocContext))]
-    partial class SpljocContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(StromGrupnContext))]
+    partial class StromGrupnContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

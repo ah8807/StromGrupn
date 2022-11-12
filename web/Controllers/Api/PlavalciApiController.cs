@@ -16,9 +16,9 @@ namespace web.Controllers_Api
     [ApiKeyAuth]
     public class PlavalciApiController : ControllerBase
     {
-        private readonly SpljocContext _context;
+        private readonly StromGrupnContext _context;
 
-        public PlavalciApiController(SpljocContext context)
+        public PlavalciApiController(StromGrupnContext context)
         {
             _context = context;
         }

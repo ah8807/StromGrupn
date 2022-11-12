@@ -15,9 +15,9 @@ namespace web.Controllers
     [Authorize(Roles = "Administrator,Trener")]
     public class PlavalciController : Controller
     {
-        private readonly SpljocContext _context;
+        private readonly StromGrupnContext _context;
 
-        public PlavalciController(SpljocContext context)
+        public PlavalciController(StromGrupnContext context)
         {
             _context = context;
         }
@@ -25,8 +25,8 @@ namespace web.Controllers
         // GET: Plavalci
         public async Task<IActionResult> Index()
         {
-            var spljocContext = _context.Plavalci.Include(p => p.Skupina);
-            return View(await spljocContext.ToListAsync());
+            var StromGrupnContext = _context.Plavalci.Include(p => p.Skupina);
+            return View(await StromGrupnContext.ToListAsync());
         }
 
         // GET: Plavalci/Details/5

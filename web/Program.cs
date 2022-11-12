@@ -29,7 +29,7 @@ namespace web
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<SpljocContext>();
+                    var context = services.GetRequiredService<StromGrupnContext>();
                     context.Database.EnsureCreated();
                     DbInitializer.Initialize(context);
                 }

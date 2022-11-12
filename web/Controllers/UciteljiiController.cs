@@ -12,9 +12,9 @@ namespace web.Controllers
 {
     public class UciteljiiController : Controller
     {
-        private readonly SpljocContext _context;
+        private readonly StromGrupnContext _context;
 
-        public UciteljiiController(SpljocContext context)
+        public UciteljiiController(StromGrupnContext context)
         {
             _context = context;
         }

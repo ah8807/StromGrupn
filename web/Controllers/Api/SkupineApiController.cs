@@ -16,9 +16,9 @@ namespace web.Controllers_Api
     [ApiKeyAuth]
     public class SkupineApiController : ControllerBase
     {
-        private readonly SpljocContext _context;
+        private readonly StromGrupnContext _context;
 
-        public SkupineApiController(SpljocContext context)
+        public SkupineApiController(StromGrupnContext context)
         {
             _context = context;
         }

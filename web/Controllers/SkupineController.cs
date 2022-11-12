@@ -15,9 +15,9 @@ namespace web.Controllers
     [Authorize(Roles ="Administrator,Trener")]
     public class SkupineController : Controller
     {
-        private readonly SpljocContext _context;
+        private readonly StromGrupnContext _context;
 
-        public SkupineController(SpljocContext context)
+        public SkupineController(StromGrupnContext context)
         {
             _context = context;
         }
@@ -25,8 +25,8 @@ namespace web.Controllers
         // GET: Skupine
         public async Task<IActionResult> Index()
         {
-            var spljocContext = _context.Skupine.Include(s => s.Bazen).Include(s => s.Ucitelj);
-            return View(await spljocContext.ToListAsync());
+            var StromGrupnContext = _context.Skupine.Include(s => s.Bazen).Include(s => s.Ucitelj);
+            return View(await StromGrupnContext.ToListAsync());
         }
 
         // GET: Skupine/Details/5

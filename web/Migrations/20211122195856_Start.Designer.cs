@@ -9,7 +9,7 @@ using web.Data;
 
 namespace web.Migrations
 {
-    [DbContext(typeof(SpljocContext))]
+    [DbContext(typeof(StromGrupnContext))]
     [Migration("20211122195856_Start")]
     partial class Start
     {

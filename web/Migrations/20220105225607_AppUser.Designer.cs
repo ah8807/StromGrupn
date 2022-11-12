@@ -9,7 +9,7 @@ using web.Data;
 
 namespace web.Migrations
 {
-    [DbContext(typeof(SpljocContext))]
+    [DbContext(typeof(StromGrupnContext))]
     [Migration("20220105225607_AppUser")]
     partial class AppUser
     {

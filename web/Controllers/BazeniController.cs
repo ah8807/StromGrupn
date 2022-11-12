@@ -14,9 +14,9 @@ namespace web.Controllers
 {
     public class BazeniController : Controller
     {
-        private readonly SpljocContext _context;
+        private readonly StromGrupnContext _context;
 
-        public BazeniController(SpljocContext context)
+        public BazeniController(StromGrupnContext context)
         {
             _context = context;
         }
