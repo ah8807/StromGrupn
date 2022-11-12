@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\jurev\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\jurev\\.nuget\\packages"
-    ]
-  }
-}
