@@ -8,5 +8,5 @@ IF NOT EXISTS (
         FROM sys.databases
         WHERE name = N'StromGrupn'
 )
-CREATE DATABASE Sploc
+CREATE DATABASE StromGrupn
 GO
