@@ -254,68 +254,6 @@ namespace web.Data
             }
             context.SaveChanges();
 
-            var bazeni = new Bazen[]
-            {
-                new Bazen("Tivoli","Celovska cesta 25, 1000 Ljubljana"),
-                new Bazen("DIF","Gortanova ulica 22, 1000 Ljubljana")
-            };
-
-            foreach (Bazen r in bazeni)
-            {
-                context.Bazeni.Add(r);
-            }
-            
-            context.SaveChanges();
-
-            var ucitelji = new Ucitelj[]{
-                new Ucitelj("Marko","Varko",new DateTime(1980,4,2),10),
-                new Ucitelj("Branka","Danka",new DateTime(1999,7,28),10),
-                new Ucitelj("Miki","Milan",new DateTime(1997,11,11),8)
-            };
-
-            foreach (Ucitelj r in ucitelji)
-            {
-                context.Ucitelji.Add(r);
-            }
-
-            context.SaveChanges();
-
-            var skupine = new Skupina[]
-            {
-                new Skupina(1,1,4,17),
-                new Skupina(1,1,5,17),
-                new Skupina(3,2,4,17),
-                new Skupina(2,2,6,17),
-                new Skupina(1,2,8,18),
-                new Skupina(2,1,3,20)
-            };
-
-            foreach (Skupina r in skupine)
-            {
-                context.Skupine.Add(r);
-            }
-
-            context.SaveChanges();
-
-            var plavalci = new Plavalec[]
-            {
-                new Plavalec("Marko", "Zerjal",new DateTime(2001,12,1),1),
-                new Plavalec("Mateja", "Novak",new DateTime(1999,7,2),1),
-                new Plavalec("Boris", "Jereb",new DateTime(2009,3,26),2), 
-                new Plavalec("Katarina", "Zelnik",new DateTime(2003,1,7),3),
-                new Plavalec("Darina", "Kastelic",new DateTime(1997,9,29),4),
-                new Plavalec("Marjan", "Boris",new DateTime(1990,2,17),5),
-                new Plavalec("Branko", "Batelj",new DateTime(2000,6,2),6),            
-            };
-
-            foreach(Plavalec r in plavalci)
-            {
-                context.Plavalci.Add(r);
-            }
-
-            context.SaveChanges();
-
-
         }
     }
 }
