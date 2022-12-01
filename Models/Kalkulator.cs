@@ -21,6 +21,10 @@ namespace web.Models
         public List<SelectListItem> Avti { get; set; }
         public string izbranAvto { get; set; }
 
+        public List<SelectListItem> Energenti { get; set; }
+        
+        public string izbranEnergent { get; set; }
+
         public double kilometerPovprecje { get; set; }
 
         public double porabaPovprecje { get; set; }

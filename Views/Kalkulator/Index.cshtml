@@ -11,7 +11,8 @@
     <div class="col-md-4">
         <tr>Izberite željeni avto</tr>
         <tr>@Html.DropDownListFor(r => r.izbranAvto,
-            new SelectList(Model.Avti, "Value", "Text"))</tr>
+            new SelectList(Model.Avti, "Value", "Text"))
+        </tr>
     </div>
     <div class="col-md-4">
         <div class="form-group">
@@ -33,6 +34,12 @@
             <input asp-for="porabaPovprecje" class="form-control" />
             <span asp-validation-for="porabaPovprecje" class="text-danger"></span>
         </div>
+    </div>
+    <div class="col-md-4">
+        <tr>Kater energent uporablja vaš avto</tr>
+        <tr>@Html.DropDownListFor(r => r.izbranEnergent,
+            new SelectList(Model.Energenti, "Value", "Text"))
+        </tr>
     </div>
     <div class="col-md-4">
         <div class="form-group">
