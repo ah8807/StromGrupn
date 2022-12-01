@@ -3,60 +3,56 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="card bg-light text-dark opacity-50">
+    <div class="opacity.4">
+        <div class="row justify-content-center">
+            <h1>Kalkulator</h1>
+        </div>
+        <form asp-action="Calculate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 align-center">
+                    <tr>Izberite željeni avto</tr>
+                    <tr>@Html.DropDownListFor(r => r.izbranAvto,
+                        new SelectList(Model.Avti, "Value", "Text"))</tr>
+                </div>
+            </div>
 
-<h1>Kalkulator</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-4 align-center">
+                    <div class="form-group">
+                        <label asp-for="kilometerPovprecje" class="control-label">Koliko kilometrov prevozite
+                            letno</label>
+                        <input asp-for="kilometerPovprecje" class="form-control" />
+                        <span asp-validation-for="kilometerPovprecje" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 align-center">
+                    <div class="form-group">
+                        <label asp-for="porabaPovprecje" class="control-label">Trenutna poraba goriva na 100km</label>
+                        <input asp-for="porabaPovprecje" class="form-control" />
+                        <span asp-validation-for="porabaPovprecje" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <tr>Kater energent uporablja vaš avto</tr>
+                    <tr>@Html.DropDownListFor(r => r.izbranEnergent,
+                        new SelectList(Model.Energenti, "Value", "Text"))
+                    </tr>
+                </div>
 
-<form asp-action="Calculate">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="col-md-4">
-        <tr>Izberite željeni avto</tr>
-        <tr>@Html.DropDownListFor(r => r.izbranAvto,
-            new SelectList(Model.Avti, "Value", "Text"))
-        </tr>
+
+            </div>
+            <div class="row justify-content-center">
+                <div class="form-group">
+                    <input type="submit" value="Izračunaj" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="naslov" class="control-label">Vnesite vaš naslov</label>
-            <input asp-for="naslov" class="form-control" />
-            <span asp-validation-for="naslov" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="kilometerPovprecje" class="control-label">Koliko kilometrov prevozite letno</label>
-            <input asp-for="kilometerPovprecje" class="form-control" />
-            <span asp-validation-for="kilometerPovprecje" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="porabaPovprecje" class="control-label">Trenutna poraba goriva na 100km</label>
-            <input asp-for="porabaPovprecje" class="form-control" />
-            <span asp-validation-for="porabaPovprecje" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <tr>Kater energent uporablja vaš avto</tr>
-        <tr>@Html.DropDownListFor(r => r.izbranEnergent,
-            new SelectList(Model.Energenti, "Value", "Text"))
-        </tr>
-    </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="soncneCeliceVprasanje" class="control-label">Ali imate sončne celice?</label>
-            <input asp-for="soncneCeliceVprasanje" class="form-control" />
-            <span asp-validation-for="soncneCeliceVprasanje" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="proizvodnjaKilovatnihUr" class="control-label">Če da, koliko kilovatnih ur proizvedete
-                na leto?</label>
-            <input asp-for="proizvodnjaKilovatnihUr" class="form-control" />
-            <span asp-validation-for="proizvodnjaKilovatnihUr" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Izračunaj" class="btn btn-primary" />
-    </div>
-</form>
+</div>
+</div>
