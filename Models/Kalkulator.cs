@@ -41,5 +41,11 @@ namespace web.Models
         public double odgovorSoncneCeliceProizvodnja { get; set; }
 
         public double razlikaDenarja { get; set; }
+
+        public double avtoTrenutniStrosek {get; set;}
+        public double avtoPrihodnjiStrosek {get; set;}
+        public double mocElektrarneKw  {get; set;}
+        public double investicija {get; set;}
+
     }
 }

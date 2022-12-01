@@ -59,7 +59,7 @@ namespace web.Controllers
             double cena1watt = 1.5;
             double cenaDiezel = 1.65;
             double cenaBenzin = 1.55;
-            double cenaElektrikeWh = 0.16/1000;
+            double cenaElektrikeWh = 0.16 / 1000;
 
             double energent;
 
@@ -80,11 +80,16 @@ namespace web.Controllers
 
             int kolicinaElektrineNaLetoNaPrikljucnoMoc = 779;
 
-            double mocElektrarneKw = porabaWatnihUr1Leto/kolicinaElektrineNaLetoNaPrikljucnoMoc/1000;
+            double mocElektrarneKw = porabaWatnihUr1Leto / kolicinaElektrineNaLetoNaPrikljucnoMoc / 1000;
 
             double cenaElektrarne = mocElektrarneKw * 1000 / cena1watt;
 
             double investicija = avtoELCena + cenaElektrarne;
+
+            kalkulator.investicija = investicija;
+            kalkulator.mocElektrarneKw = mocElektrarneKw;
+            kalkulator.avtoPrihodnjiStrosek = avtoPrihodnjiStrosek;
+            kalkulator.avtoTrenutniStrosek = avtoTrenutniStrosek;
 
             logger.LogDebug("avtoSteviloKilometrov: " + avtoSteviloKilometrov + "\n"
                             + "avtoporabaGoriva1km: " + avtoporabaGoriva1km + "\n"
