@@ -37,5 +37,8 @@ namespace web.Models
         public double odgovorSoncneCeliceProizvodnja { get; set; }
 
         public double razlikaDenarja { get; set; }
+        public List<SelectListItem> Energenti { get; set; }
+
+        public string izbranEnergent { get; set; }
     }
 }

@@ -35,40 +35,82 @@ namespace web.Controllers
             var logger = serviceProvider.GetService<ILoggerFactory>().CreateLogger<Program>();
             logger.LogDebug("Index");
 
-            List<SelectListItem> list = GetData();
-            Kalkulator requestViewModel = new Kalkulator { Avti = list };
+            List<SelectListItem> listAvti = GetAvtoData();
+            List<SelectListItem> listEnergenti = GetEnergentiData();
+            Kalkulator requestViewModel = new Kalkulator { Avti = listAvti, Energenti = listEnergenti };
             return View(requestViewModel);
         }
 
         // Ob kliku na calculate, se zgodi ta metoda
         public IActionResult Calculate(Kalkulator kalkulator)
         {
-
             var logger = serviceProvider.GetService<ILoggerFactory>().CreateLogger<Program>();
             logger.LogDebug("Calculate");
 
-            int odgovorCena;
+            // Avto (poraba in cena)
+            int avtoCena = Convert.ToInt32(kalkulator.izbranAvto.Split(";")[0]);
+            int avtoPoraba = Convert.ToInt32(kalkulator.izbranAvto.Split(";")[1]);
+
+            // Prevozenih kilometrov
+            double steviloKilometrov = kalkulator.kilometerPovprecje;
+            // Poraba goriva
+            double porabaGoriva1km = kalkulator.porabaPovprecje / 100;
+
+
+            double odgovorCena;
             double odgovorSoncneCeliceProizvodnja;
             double razlikaDenarja;
 
             double cena1watt = 1.5;
-            double porabaVozila;
+            double cenaDiezel = 1.65;
+            double cenaBenzin = 1.55;
+            double cenaElektrikeWh = 0.16/1000;
 
+            double energent;
+
+            if (kalkulator.izbranEnergent.Equals("0"))
+            {
+                energent = cenaBenzin;
+            }
+            else
+            {
+                energent = cenaDiezel;
+            }
+
+            // Formula za porabo v 1 letu: 
+            double avtoTrenutniStrosek = steviloKilometrov * porabaGoriva1km * energent;
+            double avtoPrihodnjiStrosek = steviloKilometrov * avtoPoraba * cenaElektrikeWh;
+
+            logger.LogDebug("avtoTrenutniStrosek: " + avtoTrenutniStrosek + "\n"
+                            + "avtoPrihodnjiStrosek: " + avtoPrihodnjiStrosek + "\n"
+                            + "avtoCena: " + avtoCena);
 
             return View(kalkulator);
         }
 
-        private static List<SelectListItem> GetData()
+        private static List<SelectListItem> GetAvtoData()
         {
             //prep the vcontroller-you can do this from db
-            List<SelectListItem> list = new List<SelectListItem>();
-            SelectListItem selectListItemA = new SelectListItem { Text = "Tesla Model 3 Performance", Value = "37.990" };
-            SelectListItem selectListItemB = new SelectListItem { Text = "CUPRA Born 110 kW - 45 kWh", Value = "28.000" };
-            SelectListItem selectListItemC = new SelectListItem { Text = "Volkswagen ID.3 Pure Performance", Value = "47.000" };
-            list.Add(selectListItemA);
-            list.Add(selectListItemB);
-            list.Add(selectListItemC);
-            return list;
+            List<SelectListItem> listAvti = new List<SelectListItem>();
+            SelectListItem selectListItemA = new SelectListItem { Text = "Tesla Model 3 Performance", Value = "66465;163" };
+            SelectListItem selectListItemB = new SelectListItem { Text = "CUPRA Born 110 kW - 45 kWh", Value = "32700;164" };
+            SelectListItem selectListItemC = new SelectListItem { Text = "Volkswagen ID.3 Pure Performance", Value = "37990;164" };
+            listAvti.Add(selectListItemA);
+            listAvti.Add(selectListItemB);
+            listAvti.Add(selectListItemC);
+
+            return listAvti;
+        }
+
+        private static List<SelectListItem> GetEnergentiData()
+        {
+            List<SelectListItem> listEnergenti = new List<SelectListItem>();
+            SelectListItem selectListItem1 = new SelectListItem { Text = "Bencin", Value = "0" };
+            SelectListItem selectListItem2 = new SelectListItem { Text = "Diezel", Value = "1" };
+            listEnergenti.Add(selectListItem1);
+            listEnergenti.Add(selectListItem2);
+
+            return listEnergenti;
         }
 
     }
