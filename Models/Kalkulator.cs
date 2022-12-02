@@ -25,6 +25,8 @@ namespace web.Models
         
         public string izbranEnergent { get; set; }
 
+        public string izbranEnergentIme { get; set; }
+
         public double kilometerPovprecje { get; set; }
 
         public double porabaPovprecje { get; set; }
