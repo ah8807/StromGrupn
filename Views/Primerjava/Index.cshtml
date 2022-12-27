@@ -1,68 +1,373 @@
 @model web.Models.Kalkulator
 
 @{
-    ViewData["Title"] = "Index";
+  ViewData["Title"] = "Index";
 }
-<div class="card mb-3 bg-light text-dark opacity-50 w-100 p-3 jusitfy-content-center align-center">
 
-    <div class="row justify-content-center">
-        <h1>Primerjava med avtomi</h1>
-
-        <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content.</p>
-                    <div class="panel-footer row m-3"><!-- panel-footer -->
-                        <div class="col-xs-6 text-left">
-                            <div class="previous">
-                                <button type="button" class="btn btn-default btn-lg bg-light">
-                                    < </button>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 text-right">
-                            <div class="next">
-                                <button type="button" class="btn btn-default btn-lg bg-light">
-                                    >
-                                </button>
-                            </div>
-                        </div>
-                        <form class="form-inline">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                    </div><!-- end panel-footer -->
-
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <div class="panel-footer row m-3"><!-- panel-footer -->
-                        <div class="col-xs-6 text-left">
-                            <div class="previous">
-                                <button type="button" class="btn btn-default btn-lg bg-light">
-                                    < </button>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 text-right">
-                            <div class="next">
-                                <button type="button" class="btn btn-default btn-lg bg-light">
-                                    >
-                                </button>
-                            </div>
-                        </div>
-                        <form class="form-inline">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                    </div><!-- end panel-footer -->
-
-                </div>
-            </div>
+<div class="container">
+  <!--Section: News of the day-->
+  <section class="border-bottom pb-4 mb-5">
+    <div class="row gx-5">
+      <div class="col-md-6 mb-4">
+        <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+          <img src="images/newsOfTheDay.png" class="img-fluid" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
         </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">Novica dana</span>
+        <h4><strong>Težava s pomanjkanjem elektrike: ponekod že prepovedujejo uporabo električnih avtomobilov</strong>
+        </h4>
+        <p class="text-muted">
+          O podobnih ukrepih naj bi razmišljali tudi v Nemčiji, a za zdaj ostaja pri govoricah.
+          O prepovedi uporabe bencinskih avtomobilov je v zadnjem času pogosto precej govora.
+          Pri tem se omenjajo omejitve uporabe v mestih, omejitve na splošni ravni in tako naprej.
+          Nenavadne pa se na drugi strani zdijo informacije o prepovedi uporabe električnih avtomobilov v Švici.
+        </p>
+        <button type="button" class="btn btn-primary">Read more</button>
+      </div>
+    </div>
+  </section>
+  <!--Section: News of the day-->
+
+  <!--Section: Content-->
+  <section>
+    <div class="row gx-lg-5">
+      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <!-- News block -->
+        <div>
+          <!-- Featured image -->
+          <div class="bg-image hover-overlay shadow-1-strong ripple rounded-5 mb-4" data-mdb-ripple-color="light">
+            <img src="images/featuredLeft.jpg" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+
+          <!-- Article data -->
+          <div class="row mb-3">
+
+
+            <div class="col-6 text-end">
+              <u> 10.01.2023</u>
+            </div>
+          </div>
+
+          <!-- Article title and description -->
+          <a href="" class="text-dark">
+            <h5>Še en hladen tuš za električne avtomobile</h5>
+
+            <p>
+              Raziskava je pokazala, da so obeti za prodajo in tržni delež električnih avtomobilov precej manj rožnati
+              kot lani.
+              Še en hladen tuš za električne avtomobile.Svetovalno podjetje KPMG je opravilo že 23. tradicionalno
+              raziskavo, v
+              kateri je sodelovalo več kot 900 vodilnih v avtomobilski industriji v 30 državah, ki so med drugim
+              odgovarjali na
+              vprašanja o električnih avtomobilih.
+            </p>
+          </a>
+
+          <hr />
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news11.jpg" class="img-fluid shadow-1-strong rounded"
+                  alt="Hollywood Sign on The Hill" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>Japonci so za elektriko, a v majhnih dozah</strong></p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news12.jpg" class="img-fluid shadow-1-strong rounded" alt="Palm Springs Road" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>In najboljši (avtomobilski) nakup je ...?</strong></p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news13.jpg" class="img-fluid shadow-1-strong rounded" alt="Los Angeles Skyscrapers" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>Audi postaja okolju prijazen, a ne (zgolj) z avtomobili</strong></p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news14.jpg" class="img-fluid shadow-1-strong rounded" alt="Skyscrapers" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>BMW storil naslednji korak z vozili na vodik</strong></p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- News block -->
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        <!-- News block -->
+        <div>
+          <!-- Featured image -->
+          <div class="bg-image hover-overlay shadow-1-strong rounded-5 ripple mb-4" data-mdb-ripple-color="light">
+            <img src="images/featuredCenter.jpg" class="img-fluid" alt="Brooklyn Bridge" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+
+          <!-- Article data -->
+          <div class="row mb-3">
+
+
+            <div class="col-6 text-end">
+              <u> 10.01.2023</u>
+            </div>
+          </div>
+
+          <!-- Article title and description -->
+          <a href="" class="text-dark">
+            <h5>To je novi električni "mikro-kamper" z 285 km dosega</h5>
+
+            <p>
+              Mercedes-Benz je električno različico razreda T, imenovano EQT, predstavil z idejo električnega malega
+              avtodoma.
+              Vseeno pa ima nekaj oblikovalskih podrobnosti, s katerimi se razlikuje od bencinsko in dizelsko gnanega
+              razreda T.
+              Te tičijo predvsem na maski spredaj, letvice na zračni odprtini so oblikovane za boljšo aerodinamičnost.
+            </p>
+          </a>
+
+          <hr />
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news21.jpg" class="img-fluid shadow-1-strong rounded" alt="Five Lands National Park" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>Porsche povečuje vlaganja v sintetična goriva, uporaba vse bolj smotrna</strong>
+                </p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news22.jpg" class="img-fluid shadow-1-strong rounded" alt="Paris - Eiffel Tower" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>Za naslednje leto je pol že razprodanih</strong></p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news23.jpeg" class="img-fluid shadow-1-strong rounded" alt="Louvre" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>Največ glasov alfi, kdo še v finale izbora Slovenski avto leta?</strong></p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news24.jpeg" class="img-fluid shadow-1-strong rounded" alt="Times Square" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>Cuprin novi avto: še eden v Evropo iz kitajske tovarne</strong></p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- News block -->
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        <!-- News block -->
+        <div>
+          <!-- Featured image -->
+          <div class="bg-image hover-overlay shadow-1-strong rounded-5 ripple mb-4" data-mdb-ripple-color="light">
+            <img src="images/featuredRight.png" class="img-fluid" alt="Golden Gate National Recreation Area" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+
+          <!-- Article data -->
+          <div class="row mb-3">
+
+
+            <div class="col-6 text-end">
+              <u> 10.01.2023</u>
+            </div>
+          </div>
+
+          <!-- Article title and description -->
+          <a href="" class="text-dark">
+            <h5>Alfin SUV: navdušenje javnosti, taki so prodajni podatki v Slovenijis</h5>
+
+            <p>
+              Tonale je novi model Alfe Romeo, ki za znamko predstavlja ključni povezovalni model med preteklostjo in
+              napovedano
+              električno prihodnostjo. Tonale je od vseh kandidatov v izboru Slovenski avto leta od bralcev prejel
+              največ glasov.
+              Letos jih bo na slovenske ceste zapeljalo manj kot 50, prihodnje leto pa predvidoma že 200. V povprečju so
+              Slovenci
+              zanj letos odšteli 36 tisoč evrov.
+            </p>
+          </a>
+
+          <hr />
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news31.jpg" class="img-fluid shadow-1-strong rounded" alt="Brooklyn Bridge" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>Taka parkiranja zelo sporna, kaj storiti? Obeta se prva rešitev.</strong></p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news32.jpg" class="img-fluid shadow-1-strong rounded" alt="Hamilton Park" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>Vse več pošiljk bodo pripeljali električni dostavniki</strong></p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news33.jpg" class="img-fluid shadow-1-strong rounded"
+                  alt="Perdana Botanical Garden Kuala Lumpur" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>Vas bo električni avtomobil uspel ogreti v zimskem času? ADAC meni, da nekateri
+                    le s težavo</strong></p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- News -->
+          <a href="" class="text-dark">
+            <div class="row mb-4 border-bottom pb-2">
+              <div class="col-3">
+                <img src="images/news34.jpg" class="img-fluid shadow-1-strong rounded" alt="Perdana Botanical Garden" />
+              </div>
+
+              <div class="col-9">
+                <p class="mb-2"><strong>To je preprosto najzmogljivejši serijski električni terenec na planetu</strong>
+                </p>
+                <p>
+                  <u> 10.01.2023</u>
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- News block -->
+      </div>
+    </div>
+  </section>
+  <!--Section: Content-->
+
+  <!-- Pagination -->
+  <nav class="my-4" aria-label="...">
+    <ul class="pagination pagination-circle justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>
