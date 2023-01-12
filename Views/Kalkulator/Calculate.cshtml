@@ -6,6 +6,8 @@
     Chart pieChart = (Chart)ViewData["PieChart"];
     Chart horizontalBarChart = (Chart)ViewData["HorizontalBarChart"];
     Chart lineChart = (Chart)ViewData["LineChart"];
+    Chart HorizontalBarChartCrpalkaElektrika = (Chart)ViewData["HorizontalBarChartCrpalkaElektrika"];
+    Chart LineChartByMonth = (Chart)ViewData["LineChartByMonth"];
 }
 
 
@@ -32,6 +34,18 @@
             <canvas id="pieChart"></canvas>
         </div>
     </div>
+    <div class="card col-md-6">
+        <div class="card-body">
+            <h5 class="card-title">Poraba električne enrgije</h5>
+            <canvas id="HorizontalBarChartCrpalkaElektrika"></canvas>
+        </div>
+    </div>
+    <div class="card col-md-6">
+        <div class="card-body">
+            <h5 class="card-title">Mesečna poraba</h5>
+            <canvas id="LineChartByMonth"></canvas>
+        </div>
+    </div>
 </div>
 
 @section Scripts {
@@ -54,5 +68,11 @@
 </script>
 <script type="text/javascript">
     @Html.Raw(lineChart.CreateChartCode("lineChart"));
+</script>
+<script type="text/javascript">
+    @Html.Raw(HorizontalBarChartCrpalkaElektrika.CreateChartCode("HorizontalBarChartCrpalkaElektrika"));
+</script>
+<script type="text/javascript">
+    @Html.Raw(LineChartByMonth.CreateChartCode("LineChartByMonth"));
 </script>
 }

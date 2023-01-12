@@ -77,6 +77,11 @@ namespace web.Controllers
             }
 
             kalkulator.izbranEnergentIme = energent;
+
+            int crpalkaCena = Convert.ToInt32(kalkulator.izbranaCrpalka.Split(";")[0]);
+            int crpalkaPorabaNaDanvWh = Convert.ToInt32(kalkulator.izbranaCrpalka.Split(";")[1]);
+
+            double crpalkaPorabaNaLeto = crpalkaPorabaNaDanvWh * 365;
             double cena_starega_avta = kalkulator.izbranStrosekAvtaObNakupu;
 
             // Formula za porabo v 1 letu: 
@@ -91,10 +96,8 @@ namespace web.Controllers
 
             double cenaElektrarne = mocElektrarneKw * 1000 / cena1watt;
 
-            double investicija = avtoELCena + cenaElektrarne;
+            double investicija = avtoELCena + cenaElektrarne + crpalkaCena;
 
-
-    
             kalkulator.investicija = investicija;
             kalkulator.mocElektrarneKw = mocElektrarneKw;
             kalkulator.avtoPrihodnjiStrosek = avtoPrihodnjiStrosek;
@@ -123,13 +126,14 @@ namespace web.Controllers
             List<double?> values = new List<double?>();
             values.Add(avtoELCena);
             values.Add(cenaElektrarne);
+            values.Add(crpalkaCena);
             GeneratePieChart(pieChart, values);
             ViewData["PieChart"] = pieChart;
 
-            Chart horizontalBarChart = GenerateHorizontalBarChart(energent, avtoTrenutniStrosek, avtoPrihodnjiStrosek);
+            Chart horizontalBarChart = GenerateHorizontalBarChart(energent, "Elektrika", avtoTrenutniStrosek, avtoPrihodnjiStrosek);
             ViewData["HorizontalBarChart"] = horizontalBarChart;
 
-            Chart horizontalBarChart2 = GenerateHorizontalBarChart(energent, avtoTrenutniStrosek, avtoPrihodnjiStrosek);
+            Chart horizontalBarChart2 = GenerateHorizontalBarChart(energent, "Elektrika", avtoTrenutniStrosek, avtoPrihodnjiStrosek);
             ViewData["HorizontalBarChart2"] = horizontalBarChart2;
 
             
@@ -146,6 +150,9 @@ namespace web.Controllers
 
             ViewData["LineChart"] = lineChart;
 
+            Chart horizontalBarChartPorabaElektrike = GenerateHorizontalBarChart("Toplotna črpalka", "Električni avtomobil", crpalkaPorabaNaLeto, porabaWatnihUr1Leto);
+            ViewData["HorizontalBarChartCrpalkaElektrika"] = horizontalBarChartPorabaElektrike;
+
             return View(kalkulator);
         }
 
@@ -154,18 +161,20 @@ namespace web.Controllers
             chart.Type = Enums.ChartType.Pie;
 
             ChartJSCore.Models.Data data = new ChartJSCore.Models.Data();
-            data.Labels = new List<string>() { "Nakup električnega avtomovila", "Nakup sončnih celic" };
+            data.Labels = new List<string>() { "Nakup električnega avtomovila", "Nakup sončnih celic", "Nakup in montaža toplotne črpalke" };
 
             PieDataset dataset = new PieDataset()
             {
                 Label = "Podatki",
                 BackgroundColor = new List<ChartColor>() {
                     ChartColor.FromHexString("#FF6384"),
-                    ChartColor.FromHexString("#36A2EB")
+                    ChartColor.FromHexString("#36A2EB"),
+                    ChartColor.FromHexString("#7CFC00")
                 },
                 HoverBackgroundColor = new List<ChartColor>() {
                     ChartColor.FromHexString("#FF6384"),
-                    ChartColor.FromHexString("#36A2EB")
+                    ChartColor.FromHexString("#36A2EB"),
+                    ChartColor.FromHexString("#7CFC00")
                 },
                 Data = values
             };
@@ -178,7 +187,7 @@ namespace web.Controllers
             return chart;
         }
 
-        private static Chart GenerateHorizontalBarChart(String gorivo, double avtoTrenutniStrosek, double avtoPrihodnjiStrosek)
+        private static Chart GenerateHorizontalBarChart(String label1, String label2, double value1, double value2)
         {
             Chart chart = new Chart();
             chart.Type = Enums.ChartType.Bar;
@@ -190,10 +199,10 @@ namespace web.Controllers
                     {
                         new VerticalBarDataset()
                         {
-                            Label = gorivo,
+                            Label = label1,
                             Data = new List<VerticalBarDataPoint?>()
                             {
-                                new VerticalBarDataPoint(avtoTrenutniStrosek, 1)
+                                new VerticalBarDataPoint(value1, 1)
                             },
                             BackgroundColor = new List<ChartColor>
                             {
@@ -206,10 +215,10 @@ namespace web.Controllers
                     {
                         new VerticalBarDataset()
                         {
-                            Label = "Elektrika",
+                            Label = label2,
                             Data = new List<VerticalBarDataPoint?>()
                             {
-                                new VerticalBarDataPoint(avtoPrihodnjiStrosek, 2)
+                                new VerticalBarDataPoint(value2, 2)
                             },
                             BackgroundColor = new List<ChartColor>
                             {
