@@ -49,5 +49,12 @@ namespace web.Models
         public double mocElektrarneKw  {get; set;}
         public double investicija {get; set;}
 
+        public List<SelectListItem> Crpalke { get; set; }
+        public string izbranaCrpalka { get; set; }
+
+        public double izbranaPovrsina { get; set; }
+
+        public double izbranStrosekAvtaObNakupu{ get; set; }
+
     }
 }

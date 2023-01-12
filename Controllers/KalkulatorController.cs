@@ -36,7 +36,9 @@ namespace web.Controllers
 
             List<SelectListItem> listAvti = GetAvtoData();
             List<SelectListItem> listEnergenti = GetEnergentiData();
-            Kalkulator requestViewModel = new Kalkulator { Avti = listAvti, Energenti = listEnergenti };
+            List<SelectListItem> listCrpalke = GetCrpalkeData();
+
+            Kalkulator requestViewModel = new Kalkulator { Avti = listAvti, Energenti = listEnergenti, Crpalke = listCrpalke };
             return View(requestViewModel);
         }
 
@@ -75,6 +77,8 @@ namespace web.Controllers
             }
 
             kalkulator.izbranEnergentIme = energent;
+
+            
 
             // Formula za porabo v 1 letu: 
             double avtoTrenutniStrosek = avtoSteviloKilometrov * avtoporabaGoriva1km * cenaEnergenta;
@@ -439,6 +443,19 @@ namespace web.Controllers
             };
 
             return chart;
+        }
+
+        private static List<SelectListItem> GetCrpalkeData()
+        {
+            List<SelectListItem> listCrpalke = new List<SelectListItem>();
+            SelectListItem selectListItem1 = new SelectListItem { Text = "Toplotna črpalka VODA - voda", Value = "11300;55" };
+            SelectListItem selectListItem2 = new SelectListItem { Text = "Toplotna črpalka ZEMLJA - voda", Value = "11700;75" };
+            SelectListItem selectListItem3 = new SelectListItem { Text = "Toplotna črpalka ZRAK - voda", Value = "7250;90" };
+            listCrpalke.Add(selectListItem1);
+            listCrpalke.Add(selectListItem2);
+            listCrpalke.Add(selectListItem3);
+
+            return listCrpalke;
         }
 
         private static List<SelectListItem> GetAvtoData()
