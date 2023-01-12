@@ -289,7 +289,7 @@ namespace web.Controllers
             LineDataset dataset2 = new LineDataset()
             {
                 Label = "Elektrika",
-                Data = new List<double?> { 0.11, 0.14, 0.16, 0.21, 0.23, 0.25, 0.21, 0.21, 0.20, 0.18, 0.17, 0.16 },
+                Data = data[1],
                 Fill = "true",
                 Tension = .01,
                 BackgroundColor = new List<ChartColor> { ChartColor.FromRgba(43, 44, 170, 0.4) },
