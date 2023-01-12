@@ -80,7 +80,6 @@ namespace web.Controllers
 
             int crpalkaCena = Convert.ToInt32(kalkulator.izbranaCrpalka.Split(";")[0]);
             int crpalkaPorabaNaDanvWh = Convert.ToInt32(kalkulator.izbranaCrpalka.Split(";")[1]);
-
             double crpalkaPorabaNaLeto = crpalkaPorabaNaDanvWh * 365 * kalkulator.izbranaPovrsina;
             double cena_starega_avta = kalkulator.izbranStrosekAvtaObNakupu;
 
@@ -262,21 +261,21 @@ namespace web.Controllers
                 Display = true
             };
             chart.Options.Scales.Add("x", xAxis);
-
+            List<string> labels = new List<string>();
+            int u = 0;
+            foreach (double x in data[0]){
+                labels.Add(u+"");
+                u++;
+            }
             ChartJSCore.Models.Data x_axis_lables = new ChartJSCore.Models.Data
             {
-                Labels = new List<string>
-                {
-                    "21.6. - 4.7.", "5.7. - 18.7.", "19.7. - 1.8.", "2.8. - 16.8.", "17.8. - 29.8.", "30.8. - 12.9.",
-                    "13.9. - 26.9.",
-                    "27.9. - 10.10.", "11.10. - 24.10.", "25.10. - 7.11.", "8.11. - 21.11.", "22.11. - 5.12."
-                }
+                Labels = labels
             };
 
             LineDataset dataset = new LineDataset()
             {
                 Label = "Fosilno gorivo",
-                Data = data[0],
+                Data = data[1],
                 Fill = "true",
                 Tension = .01,
                 BackgroundColor = new List<ChartColor> { ChartColor.FromRgba(75, 192, 192, 0.4) },
@@ -300,7 +299,7 @@ namespace web.Controllers
             LineDataset dataset2 = new LineDataset()
             {
                 Label = "Elektrika",
-                Data = new List<double?> { 0.11, 0.14, 0.16, 0.21, 0.23, 0.25, 0.21, 0.21, 0.20, 0.18, 0.17, 0.16 },
+                Data = data[0],
                 Fill = "true",
                 Tension = .01,
                 BackgroundColor = new List<ChartColor> { ChartColor.FromRgba(43, 44, 170, 0.4) },
@@ -602,7 +601,7 @@ namespace web.Controllers
                 (1.623 + 1.718 + 1.775 + 1.684 + 1.603 + 1.683 + 1.767 + 1.641 + 1.676 + 1.7 + 1.808 + 1.848) / 12;
             double elektrika =
                 (0.11 + 0.14 + 0.16 + 0.21 + 0.23 + 0.25 + 0.21 + 0.21 + 0.20 + 0.18 + 0.17 + 0.16) / 12;
-            double sumElektrika = cenaElAvta;
+            double sumElektrika = cenaElAvta+cenaElektrarne;
             double sumEnergent = cenaAvta;
 
             double energent_cena;
@@ -611,18 +610,19 @@ namespace web.Controllers
             else
                 energent_cena = bencin;
 
-            while (sumElektrika < sumEnergent)
+            while (sumElektrika > sumEnergent)
             {
                 sumEnergent += (km_na_leto / 12 * liter_na_100_km) * energent_cena;
                 valuesEnergent.Add(sumEnergent);
                 //sumElektrika += (km_na_leto / 12 * liter_na_100_km / 100)*elektrika;
-                //valuesEnergent.Add(sumElektrika);
+                valuesElektrika.Add(sumElektrika);
             }
 
             for (int i = 0; i <= 10; i++)
             {
                 sumEnergent += (km_na_leto / 12 * liter_na_100_km) * energent_cena;
                 valuesEnergent.Add(sumEnergent);
+                valuesElektrika.Add(sumElektrika);
             }
 
             return new List<List<double?>> { valuesElektrika, valuesEnergent };
