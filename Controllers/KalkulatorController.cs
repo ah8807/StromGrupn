@@ -600,7 +600,7 @@ namespace web.Controllers
                 (1.623+ 1.718+ 1.775+ 1.684+ 1.603+ 1.683+ 1.767+ 1.641+ 1.676+ 1.7+ 1.808+ 1.848) / 12;
             double elektrika =
                 (0.11+ 0.14+ 0.16+ 0.21+ 0.23+ 0.25+ 0.21+ 0.21+ 0.20+ 0.18+ 0.17+0.16) / 12;
-            double sumElektrika = cenaElAvta;
+            double sumElektrika = cenaElAvta+cenaElektrarne;
             double sumEnergent = cenaAvta;
             
             double energent_cena;
