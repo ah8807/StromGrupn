@@ -77,8 +77,7 @@ namespace web.Controllers
             }
 
             kalkulator.izbranEnergentIme = energent;
-
-            
+            double cena_starega_avta = kalkulator.izbranStrosekAvtaObNakupu;
 
             // Formula za porabo v 1 letu: 
             double avtoTrenutniStrosek = avtoSteviloKilometrov * avtoporabaGoriva1km * cenaEnergenta;
@@ -95,7 +94,7 @@ namespace web.Controllers
             double investicija = avtoELCena + cenaElektrarne;
 
 
-
+    
             kalkulator.investicija = investicija;
             kalkulator.mocElektrarneKw = mocElektrarneKw;
             kalkulator.avtoPrihodnjiStrosek = avtoPrihodnjiStrosek;
@@ -111,6 +110,15 @@ namespace web.Controllers
                             + "cenaElektrarne: " + cenaElektrarne + "\n"
                             + "investicija: " + investicija);
 
+            
+            List<List<double?>> consumptionByMonth = generateConsumptionByMonth(energent, cenaElektrarne, avtoELCena, cena_starega_avta, avtoSteviloKilometrov,
+                avtoporabaGoriva1km);
+
+
+            Chart lineChartByMonth = GenerateLineChartConsByMonth(consumptionByMonth);
+            ViewData["LineChartByMonth"] = lineChartByMonth;
+            
+            
             Chart pieChart = new Chart();
             List<double?> values = new List<double?>();
             values.Add(avtoELCena);
@@ -124,6 +132,8 @@ namespace web.Controllers
             Chart horizontalBarChart2 = GenerateHorizontalBarChart(energent, avtoTrenutniStrosek, avtoPrihodnjiStrosek);
             ViewData["HorizontalBarChart2"] = horizontalBarChart2;
 
+            
+            
             Chart lineChart;
             if (energent.Equals("Bencin"))
             {
@@ -222,6 +232,119 @@ namespace web.Controllers
                         Position = "right"
                     }
                 }
+            };
+
+            return chart;
+        }
+
+        private static Chart GenerateLineChartConsByMonth(List<List<double?>> data)
+        {
+            Chart chart = new Chart();
+
+            chart.Type = Enums.ChartType.Line;
+            chart.Options.Scales = new Dictionary<string, Scale>();
+            CartesianScale xAxis = new CartesianScale();
+            xAxis.Display = true;
+            xAxis.Title = new Title
+            {
+                Text = new List<string> { "stroški glede na mesec" },
+                Display = true
+            };
+            chart.Options.Scales.Add("x", xAxis);
+
+            ChartJSCore.Models.Data x_axis_lables = new ChartJSCore.Models.Data
+            {
+                Labels = new List<string>
+                {
+                    "21.6. - 4.7.", "5.7. - 18.7.", "19.7. - 1.8.", "2.8. - 16.8.", "17.8. - 29.8.", "30.8. - 12.9.",
+                    "13.9. - 26.9.",
+                    "27.9. - 10.10.", "11.10. - 24.10.", "25.10. - 7.11.", "8.11. - 21.11.", "22.11. - 5.12."
+                }
+            };
+
+            LineDataset dataset = new LineDataset()
+            {
+                Label = "Fosilno gorivo",
+                Data = data[0],
+                Fill = "true",
+                Tension = .01,
+                BackgroundColor = new List<ChartColor> { ChartColor.FromRgba(75, 192, 192, 0.4) },
+                BorderColor = new List<ChartColor> { ChartColor.FromRgb(75, 192, 192) },
+                BorderCapStyle = "butt",
+                BorderDash = new List<int>(),
+                BorderDashOffset = 0.0,
+                BorderJoinStyle = "miter",
+                PointBorderColor = new List<ChartColor> { ChartColor.FromRgb(75, 192, 192) },
+                PointBackgroundColor = new List<ChartColor> { ChartColor.FromHexString("#ffffff") },
+                PointBorderWidth = new List<int> { 1 },
+                PointHoverRadius = new List<int> { 5 },
+                PointHoverBackgroundColor = new List<ChartColor> { ChartColor.FromRgb(75, 192, 192) },
+                PointHoverBorderColor = new List<ChartColor> { ChartColor.FromRgb(220, 220, 220) },
+                PointHoverBorderWidth = new List<int> { 2 },
+                PointRadius = new List<int> { 1 },
+                PointHitRadius = new List<int> { 10 },
+                SpanGaps = false
+            };
+            
+            LineDataset dataset2 = new LineDataset()
+            {
+                Label = "Elektrika",
+                Data = new List<double?> { 0.11, 0.14, 0.16, 0.21, 0.23, 0.25, 0.21, 0.21, 0.20, 0.18, 0.17, 0.16 },
+                Fill = "true",
+                Tension = .01,
+                BackgroundColor = new List<ChartColor> { ChartColor.FromRgba(43, 44, 170, 0.4) },
+                BorderColor = new List<ChartColor> { ChartColor.FromRgb(43, 44, 170) },
+                BorderCapStyle = "butt",
+                BorderDash = new List<int>(),
+                BorderDashOffset = 0.0,
+                BorderJoinStyle = "miter",
+                PointBorderColor = new List<ChartColor> { ChartColor.FromRgba(43, 44, 170, 0.4) },
+                PointBackgroundColor = new List<ChartColor> { ChartColor.FromHexString("#ffffff") },
+                PointBorderWidth = new List<int> { 1 },
+                PointHoverRadius = new List<int> { 5 },
+                PointHoverBackgroundColor = new List<ChartColor> { ChartColor.FromRgba(43, 44, 170, 0.4) },
+                PointHoverBorderColor = new List<ChartColor> { ChartColor.FromRgb(43, 44, 170) },
+                PointHoverBorderWidth = new List<int> { 2 },
+                PointRadius = new List<int> { 1 },
+                PointHitRadius = new List<int> { 10 },
+                SpanGaps = false
+            };
+
+            x_axis_lables.Datasets = new List<Dataset>
+            {
+                dataset, dataset2
+            };
+
+            chart.Data = x_axis_lables;
+
+            ZoomOptions zoomOptions = new ZoomOptions
+            {
+                Zoom = new Zoom
+                {
+                    Wheel = new Wheel
+                    {
+                        Enabled = true
+                    },
+                    Pinch = new Pinch
+                    {
+                        Enabled = true
+                    },
+                    Drag = new Drag
+                    {
+                        Enabled = true,
+                        ModifierKey = Enums.ModifierKey.alt
+                    }
+                },
+                Pan = new Pan
+                {
+                    Enabled = true,
+                    Mode = "xy"
+                }
+            };
+
+            chart.Options.Plugins = new ChartJSCore.Models.Plugins
+            {
+                PluginDynamic = new Dictionary<string, object> { { "zoom", zoomOptions } }
             };
 
             return chart;
@@ -456,6 +579,42 @@ namespace web.Controllers
             listCrpalke.Add(selectListItem3);
 
             return listCrpalke;
+        }
+
+        public new List<List<double?>> generateConsumptionByMonth(string energent, double cenaElektrarne, double cenaElAvta, double cenaAvta, double km_na_leto, double liter_na_100_km )
+        {
+            List<double?> valuesElektrika = new List<double?>();
+            List<double?> valuesEnergent = new List<double?>();
+            double bencin =
+                (1.755 + 1.723 + 1.62 + 1.534 + 1.49 + 1.491 + 1.354 + 1.464 + 1.482 + 1.43 + 1.414 + 1.353) / 12;
+            double dizel =
+                (1.623+ 1.718+ 1.775+ 1.684+ 1.603+ 1.683+ 1.767+ 1.641+ 1.676+ 1.7+ 1.808+ 1.848) / 12;
+            double elektrika =
+                (0.11+ 0.14+ 0.16+ 0.21+ 0.23+ 0.25+ 0.21+ 0.21+ 0.20+ 0.18+ 0.17+0.16) / 12;
+            double sumElektrika = cenaElAvta;
+            double sumEnergent = cenaAvta;
+            
+            double energent_cena;
+            if (energent.Equals("Dizel"))
+                energent_cena = dizel;
+            else
+                energent_cena = bencin;
+            
+            while (sumElektrika < sumEnergent)
+            {
+                sumEnergent += (km_na_leto / 12 * liter_na_100_km)*energent_cena;
+                valuesEnergent.Add(sumEnergent);
+                //sumElektrika += (km_na_leto / 12 * liter_na_100_km / 100)*elektrika;
+                //valuesEnergent.Add(sumElektrika);
+            }
+
+            for (int i = 0; i <= 10; i++)
+            {
+                sumEnergent += (km_na_leto / 12 * liter_na_100_km)*energent_cena;
+                valuesEnergent.Add(sumEnergent);
+            }
+
+            return new List<List<double?>> { valuesElektrika, valuesEnergent };
         }
 
         private static List<SelectListItem> GetAvtoData()
