@@ -87,7 +87,13 @@ namespace web.Controllers
             double avtoTrenutniStrosek = avtoSteviloKilometrov * avtoporabaGoriva1km * cenaEnergenta;
             double avtoPrihodnjiStrosek = avtoSteviloKilometrov * avtoELPoraba * cenaElektrikeWh;
 
-            double porabaWatnihUr1Leto = avtoSteviloKilometrov * avtoELPoraba;
+            double porabaWatnihUr1Leto = (avtoSteviloKilometrov * avtoELPoraba) + crpalkaPorabaNaLeto;
+
+            double strosekCrpalkePorabaNaLetovWh = crpalkaPorabaNaLeto * cenaElektrikeWh;
+
+            kalkulator.strosekCrpalkePorabaNaLetovWh = strosekCrpalkePorabaNaLetovWh;
+
+            kalkulator.porabaWatnihUr1Leto = porabaWatnihUr1Leto;
 
             int kolicinaElektrineNaLetoNaPrikljucnoMoc = 779;
 
@@ -96,6 +102,12 @@ namespace web.Controllers
             double cenaElektrarne = mocElektrarneKw * 1000 / cena1watt;
 
             double investicija = avtoELCena + cenaElektrarne + crpalkaCena;
+
+            double trenutniStrosek = avtoTrenutniStrosek + kalkulator.strosekTrenutnegaOgrevanja;
+
+            double prihodnjiStrosek = avtoPrihodnjiStrosek + strosekCrpalkePorabaNaLetovWh;
+
+            kalkulator.prihranek = trenutniStrosek - prihodnjiStrosek;
 
             kalkulator.investicija = investicija;
             kalkulator.mocElektrarneKw = mocElektrarneKw;
@@ -112,7 +124,9 @@ namespace web.Controllers
                             + "cenaElektrarne: " + cenaElektrarne + "\n"
                             + "investicija: " + investicija + "\n"
                             + "crpalkaPorabaNaLeto: " + crpalkaPorabaNaLeto + "\n"
-                            + "cena_starega_avta: " + cena_starega_avta + "\n");
+                            + "cena_starega_avta: " + cena_starega_avta + "\n"
+                            + "strosekCrpalkePorabaNaLetovWh: " + strosekCrpalkePorabaNaLetovWh + "\n"
+                            + "porabaWatnihUr1Leto: " + porabaWatnihUr1Leto + "\n");
 
 
             List<List<double?>> consumptionByMonth = generateConsumptionByMonth(energent, cenaElektrarne, avtoELCena, cena_starega_avta, avtoSteviloKilometrov,
@@ -153,6 +167,12 @@ namespace web.Controllers
 
             Chart horizontalBarChartPorabaElektrike = GenerateHorizontalBarChart("Toplotna črpalka", "Električni avtomobil", crpalkaPorabaNaLeto, porabaWatnihUr1Leto);
             ViewData["HorizontalBarChartCrpalkaElektrika"] = horizontalBarChartPorabaElektrike;
+
+            Chart horizontalBarChartstrosekCrpalkeInKlasicnoOgrevanje = GenerateHorizontalBarChart("Toplotna črpalka", "Trenutno ogrevanje", strosekCrpalkePorabaNaLetovWh, kalkulator.strosekTrenutnegaOgrevanja);
+            ViewData["horizontalBarChartstrosekCrpalkeInKlasicnoOgrevanje"] = horizontalBarChartstrosekCrpalkeInKlasicnoOgrevanje;
+
+            Chart horizontalBarChartRazlikaLetnihStroskov = GenerateHorizontalBarChart("TČ + EV", "Trenuten",trenutniStrosek, prihodnjiStrosek);
+            ViewData["horizontalBarChartRazlikaLetnihStroskov"] = horizontalBarChartRazlikaLetnihStroskov;
 
             return View(kalkulator);
         }

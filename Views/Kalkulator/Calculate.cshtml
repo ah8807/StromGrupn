@@ -8,6 +8,8 @@
     Chart lineChart = (Chart)ViewData["LineChart"];
     Chart HorizontalBarChartCrpalkaElektrika = (Chart)ViewData["HorizontalBarChartCrpalkaElektrika"];
     Chart LineChartByMonth = (Chart)ViewData["LineChartByMonth"];
+    Chart horizontalBarChartstrosekCrpalkeInKlasicnoOgrevanje = (Chart)ViewData["horizontalBarChartstrosekCrpalkeInKlasicnoOgrevanje"];
+    Chart horizontalBarChartRazlikaLetnihStroskov = (Chart)ViewData["horizontalBarChartRazlikaLetnihStroskov"];
 }
 
 
@@ -20,23 +22,23 @@
 <div class="row">
     <div class="card col-md-6">
         <div class="card-body">
-            <h5 class="card-title">Strošek goriva v enem letu (€)</h5>
+            <h5 class="card-title">Razlika stroškov goriva v enem letu (€)</h5>
             <canvas id="horizontalBarChart"></canvas>
         </div>
         <div class="card-body">
-            <h5 class="card-title">Strošek izbranega goriva: @(Model.izbranEnergentIme) (€)</h5>
+            <h5 class="card-title">Zgodovinska cena obeh goriv v €</h5>
             <canvas id="lineChart"></canvas>
         </div>
     </div>
     <div class="card col-md-6">
         <div class="card-body">
-            <h5 class="card-title">Investicija @((int)Model.investicija) (€) </h5>
+            <h5 class="card-title">Skupna investicija: @((int)Model.investicija)€ </h5>
             <canvas id="pieChart"></canvas>
         </div>
     </div>
     <div class="card col-md-6">
         <div class="card-body">
-            <h5 class="card-title">Poraba električne energije v Wh</h5>
+            <h5 class="card-title">Poraba električne energije v Wh (Skupaj:  @((int)Model.porabaWatnihUr1Leto) Wh)</h5>
             <canvas id="HorizontalBarChartCrpalkaElektrika"></canvas>
         </div>
     </div>
@@ -44,6 +46,18 @@
         <div class="card-body">
             <h5 class="card-title">Mesečna poraba</h5>
             <canvas id="LineChartByMonth"></canvas>
+        </div>
+    </div>
+    <div class="card col-md-6">
+        <div class="card-body">
+            <h5 class="card-title">Primerjava stroškov letnega delovanja toplotne črpalke in trenuten strošek (v €)</h5>
+            <canvas id="horizontalBarChartstrosekCrpalkeInKlasicnoOgrevanje"></canvas>
+        </div>
+    </div>
+    <div class="card col-md-6">
+        <div class="card-body">
+            <h5 class="card-title">Primerjava stroškov toplotne črpalke + električno vozilo z trenutnim ogrevanjem in avtom (Prihranek: @((int)Model.prihranek)€)</h5>
+            <canvas id="horizontalBarChartRazlikaLetnihStroskov"></canvas>
         </div>
     </div>
 </div>
@@ -74,5 +88,11 @@
 </script>
 <script type="text/javascript">
     @Html.Raw(LineChartByMonth.CreateChartCode("LineChartByMonth"));
+</script>
+<script type="text/javascript">
+    @Html.Raw(horizontalBarChartstrosekCrpalkeInKlasicnoOgrevanje.CreateChartCode("horizontalBarChartstrosekCrpalkeInKlasicnoOgrevanje"));
+</script>
+<script type="text/javascript">
+    @Html.Raw(horizontalBarChartRazlikaLetnihStroskov.CreateChartCode("horizontalBarChartRazlikaLetnihStroskov"));
 </script>
 }

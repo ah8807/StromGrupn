@@ -56,5 +56,13 @@ namespace web.Models
 
         public double izbranStrosekAvtaObNakupu{ get; set; }
 
+        public double porabaWatnihUr1Leto{ get; set; }
+
+        public double strosekCrpalkePorabaNaLetovWh{ get; set; }
+
+        public double strosekTrenutnegaOgrevanja{ get; set; }
+
+        public double prihranek{ get; set; }
+
     }
 }
