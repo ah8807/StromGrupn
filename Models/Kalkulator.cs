@@ -64,5 +64,7 @@ namespace web.Models
 
         public double prihranek{ get; set; }
 
+        public double porabaWhleto { get; set; }
+
     }
 }

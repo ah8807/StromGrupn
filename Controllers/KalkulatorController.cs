@@ -87,11 +87,13 @@ namespace web.Controllers
             double avtoTrenutniStrosek = avtoSteviloKilometrov * avtoporabaGoriva1km * cenaEnergenta;
             double avtoPrihodnjiStrosek = avtoSteviloKilometrov * avtoELPoraba * cenaElektrikeWh;
 
-            double porabaWatnihUr1Leto = (avtoSteviloKilometrov * avtoELPoraba) + crpalkaPorabaNaLeto;
+            double porabaWatnihUr1Leto = ((avtoSteviloKilometrov * avtoELPoraba) + crpalkaPorabaNaLeto);
 
             double strosekCrpalkePorabaNaLetovWh = crpalkaPorabaNaLeto * cenaElektrikeWh;
 
             kalkulator.strosekCrpalkePorabaNaLetovWh = strosekCrpalkePorabaNaLetovWh;
+
+            double avtpPoraba1leto = avtoSteviloKilometrov * avtoELPoraba;
 
             kalkulator.porabaWatnihUr1Leto = porabaWatnihUr1Leto;
 
@@ -165,7 +167,7 @@ namespace web.Controllers
 
             ViewData["LineChart"] = lineChart;
 
-            Chart horizontalBarChartPorabaElektrike = GenerateHorizontalBarChart("Toplotna črpalka", "Električni avtomobil", crpalkaPorabaNaLeto, porabaWatnihUr1Leto);
+            Chart horizontalBarChartPorabaElektrike = GenerateHorizontalBarChart("Toplotna črpalka", "Električni avtomobil", crpalkaPorabaNaLeto, avtpPoraba1leto);
             ViewData["HorizontalBarChartCrpalkaElektrika"] = horizontalBarChartPorabaElektrike;
 
             Chart horizontalBarChartstrosekCrpalkeInKlasicnoOgrevanje = GenerateHorizontalBarChart("Toplotna črpalka", "Trenutno ogrevanje", strosekCrpalkePorabaNaLetovWh, kalkulator.strosekTrenutnegaOgrevanja);
