@@ -1,0 +1,17 @@
+----------------------------------------------------------------------------------
+SQL strežnik:
+na localhostu (js priporočam, da si dol date docker, potem pa narediš image za microsoft sql. Ali pa zdownloadite mssql tools pa si ročno namestite sql strežnik).
+Nastavite za prijavo za SQL strežnik: 
+username: sa; 
+password: Password123!;
+naredite bazo: StromGrupn;
+----------------------------------------------------------------------------------
+Zaganjanje projekta:
+Odprete visual studio, open new folder -> StromGrupn. Levo zgoraj izberite terminal, new terminal.
+Desno dol zraven plusa kliknite + in izberite powershell.
+cd .\StromGrupn\web\ 
+dotnet build
+dotnet run
+zdej bi se vam mogla aplikacija zagnat in se prijavit na sql strežnik, ter sama naredi par tabel in podatkov
+Če zajamra, da nimate kakega paketa, ga namestite
+----------------------------------------------------------------------------------
